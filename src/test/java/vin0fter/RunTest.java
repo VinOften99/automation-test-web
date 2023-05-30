@@ -23,10 +23,10 @@ public class RunTest {
 
 
         WebElement searchBox = driver.findElement(By.xpath("//input[@placeholder=\"Nội dung tìm kiếm...\"]"));
-        searchBox.clear();  // Xóa bất kỳ nội dung nào đã có trong ô tìm kiếm
-        searchBox.sendKeys("nông");  // Nhập từ khóa vào ô tìm kiếm
+        searchBox.clear();
+        searchBox.sendKeys("nông");
 
-        searchBox.sendKeys(Keys.RETURN);  // Mô phỏng việc nhấn Enter
+        searchBox.sendKeys(Keys.RETURN);
         System.out.println("Nhập dữ liệu thành công");
 
 
