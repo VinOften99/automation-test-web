@@ -10,17 +10,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RunTest {
+    private WebDriver driver;
 
-    public static void main(String[] args) {
-        System.out.println("hello");
-
-        WebDriver driver;
-//        System.setProperty("webdriver.chrome.driver", "")
-        WebDriverManager.chromedriver().setup(); //gọi phiên bản browser
-        driver = new ChromeDriver(); //khởi tạo giá trị cho browser
+    public void setUp() {
+        // Thiết lập driver cho trình duyệt Chrome
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("http://congnongdan.vn/");
+    }
 
+    public void SearchTest() {
+        // Mở trang web
+        driver.get("http://congnongdan.vn/");
 
         WebElement searchBox = driver.findElement(By.xpath("//input[@placeholder=\"Nội dung tìm kiếm...\"]"));
         searchBox.clear();
@@ -28,10 +29,6 @@ public class RunTest {
 
         searchBox.sendKeys(Keys.RETURN);
         System.out.println("Nhập dữ liệu thành công");
-
-
-
-
         WebElement resultsContainer = driver.findElement(By.xpath("//div[@class=\"col-md-12 col-sm-12 padding-right0\"]"));
 //        WebDriverWait wait = new WebDriverWait(driver, 10);
 //        WebElement resultsContainer = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"col-md-12 col-sm-12 padding-right0\"]")));
@@ -40,6 +37,16 @@ public class RunTest {
         } else {
             System.out.println("Tìm kiếm không thành công");
         }
+    }
 
+    public void tearDown() {
+        driver.quit();
+    }
+
+    public static void main(String[] args) {
+        RunTest test = new RunTest();
+        test.setUp();
+        test.SearchTest();
+        test.tearDown();
     }
 }
