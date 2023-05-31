@@ -10,8 +10,8 @@ public class TE001 {
     public void setUp() {
         // Thiết lập driver cho trình duyệt Chrome
         WebDriverManager.chromedriver().setup();
-        driver.manage().window().maximize();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     public void testSearchInputField() {
