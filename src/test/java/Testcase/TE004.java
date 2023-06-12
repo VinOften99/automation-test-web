@@ -1,4 +1,4 @@
-package vin0fter;
+package Testcase;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
