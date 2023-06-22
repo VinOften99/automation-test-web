@@ -7,5 +7,6 @@ Các tài nguyên đã sử dụng trong Maven repository bao gồm:
 - webdrivermanager
 - slf4j-api
 - logback-classic
+- TestNG framework
 
 Bạn có thể truy cập Maven repository tại đây: https://mvnrepository.com/
