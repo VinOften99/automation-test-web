@@ -9,11 +9,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import page.HomePage;
 import page.SearchResultPage;
-import org.openqa.selenium.Keys;
+import java.time.Duration;
 
-
-
-import java.util.concurrent.TimeUnit;
 
 public class RunTest {
     WebDriver driver;
@@ -24,15 +21,16 @@ public class RunTest {
     public void SetUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
         driver.manage().window().maximize();
+
 
         homePage = new HomePage(driver);
         searchResultPage = new SearchResultPage(driver);
     }
 
-    @Test
+    @Test (priority = 1)
     public void TE001() {
         homePage.navigateTo();
         Assert.assertTrue(homePage.isSearchInputDisplayed(), "Ô tìm kiếm không tồn tại");
@@ -42,7 +40,7 @@ public class RunTest {
         Assert.assertEquals(homePage.getSearchInputValue(), keyword, "Dữ liệu nhập vào không trùng khớp");
     }
 
-    @Test
+    @Test (priority = 2)
     public void TE002() {
         homePage.navigateTo();
         searchResultPage.enterSearchKeyword("nông");
@@ -50,7 +48,7 @@ public class RunTest {
         Assert.assertTrue(searchResultPage.getNumberOfResults() > 0);
     }
 
-    @Test
+    @Test (priority = 3)
     public void TE003() {
         homePage.navigateTo();
         searchResultPage.enterSearchKeyword("nông");
@@ -58,7 +56,7 @@ public class RunTest {
         Assert.assertTrue(searchResultPage.getNumberOfResults() > 0);
     }
 
-    @Test
+    @Test (priority = 4)
     public void TE004() {
         homePage.navigateTo();
         searchResultPage.enterSearchKeyword("ádasdasdasdas");
