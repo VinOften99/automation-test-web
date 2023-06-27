@@ -1,21 +1,15 @@
 package vin0fter.testcase;
 
-import base.Base;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import base.BaseSetup;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import page.HomePage;
 import page.SearchResultPage;
 
-import java.time.Duration;
 
-
-public class SearchTest extends Base {
+public class SearchTest extends BaseSetup {
     WebDriver driver;
     HomePage homePage;
     SearchResultPage searchResultPage;

@@ -1,19 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Page Object test example">
+<suite name="Page Object test">
     <parameter name="browserType" value="chrome" />
     <parameter name="appURL"
                value="http://congnongdan.vn" />
 
     <test name="sample test">
         <classes>
-<!--            <class name="com.anhtester.testcases.SignInTest">-->
             <class name="vin0fter.testcase.SearchTest">
                 <methods>
                     <include name="TE001" />
                     <include name="TE002" />
                     <include name="TE003" />
                     <include name="TE004" />
-
                 </methods>
             </class>
         </classes>
