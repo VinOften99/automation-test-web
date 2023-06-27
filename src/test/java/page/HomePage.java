@@ -17,6 +17,7 @@ public class HomePage {
         driver.get("http://congnongdan.vn");
     }
 
+
     // Kiểm tra xem ô tìm kiếm có hiển thị trên trang web hay không
     public boolean isSearchInputDisplayed() {
         WebElement searchInput = driver.findElement(searchInputLocator);
