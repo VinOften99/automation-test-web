@@ -3,7 +3,6 @@
     <parameter name="browserType" value="chrome" />
     <parameter name="appURL"
                value="http://congnongdan.vn" />
-
     <test name="sample test">
         <classes>
             <class name="vin0fter.testcase.SearchTest">

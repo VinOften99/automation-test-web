@@ -9,6 +9,8 @@ import page.HomePage;
 import page.SearchResultPage;
 
 
+
+
 public class SearchTest extends BaseSetup {
     WebDriver driver;
     HomePage homePage;
@@ -24,9 +26,7 @@ public class SearchTest extends BaseSetup {
 
     @Test (priority = 1)
     public void TE001() {
-//        homePage.navigateTo();
         Assert.assertTrue(homePage.isSearchInputDisplayed(), "Ô tìm kiếm không tồn tại");
-
         String keyword = "từ khóa mẫu";
         homePage.enterSearchKeyword(keyword);
         Assert.assertEquals(homePage.getSearchInputValue(), keyword, "Dữ liệu nhập vào không trùng khớp");
@@ -34,26 +34,28 @@ public class SearchTest extends BaseSetup {
 
     @Test (priority = 2)
     public void TE002() {
-//        homePage.navigateTo();
-        searchResultPage.enterSearchKeyword("nông");
+        String keyword = "nông";
+        searchResultPage.enterSearchKeyword(keyword);
         searchResultPage.clickSearchButton();
         Assert.assertTrue(searchResultPage.getNumberOfResults() > 0);
     }
 
     @Test (priority = 3)
     public void TE003() {
-//        homePage.navigateTo();
-        searchResultPage.enterSearchKeyword("nông");
+        String keyword = "nông";
+        searchResultPage.enterSearchKeyword(keyword);
         searchResultPage.pressEnterKey();
         Assert.assertTrue(searchResultPage.getNumberOfResults() > 0);
     }
 
     @Test (priority = 4)
-    public void TE004() {
-//        homePage.navigateTo();
-        searchResultPage.enterSearchKeyword("ádasdasdasdas");
+    public void TE004() throws InterruptedException {
+//        driver.navigate().refresh();
+        String keyword = "ádasdasdasdas";
+        searchResultPage.enterSearchKeyword(keyword);
         searchResultPage.clickSearchButton();
-        Assert.assertEquals(searchResultPage.getNumberOfResults(), 0);
+        Assert.assertFalse(searchResultPage.getNumberOfResults() > 0);
+
     }
 
 }
