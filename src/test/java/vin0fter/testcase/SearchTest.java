@@ -9,8 +9,6 @@ import page.HomePage;
 import page.SearchResultPage;
 
 
-
-
 public class SearchTest extends BaseSetup {
     WebDriver driver;
     HomePage homePage;
@@ -49,7 +47,7 @@ public class SearchTest extends BaseSetup {
     }
 
     @Test (priority = 4)
-    public void TE004() throws InterruptedException {
+    public void TE004() {
 //        driver.navigate().refresh();
         String keyword = "ádasdasdasdas";
         searchResultPage.enterSearchKeyword(keyword);

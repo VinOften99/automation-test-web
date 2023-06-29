@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+//import org.testng.annotations.Test;
 
 public class BaseSetup {
 
@@ -32,6 +33,7 @@ public class BaseSetup {
         };
     }
 
+//    @Test
     private static WebDriver initChromeDriver(String appURL) {
         System.out.println("Launching Chrome browser...");
         WebDriverManager.chromedriver().setup();
@@ -43,6 +45,7 @@ public class BaseSetup {
         return driver;
     }
 
+//    @Test
     private static WebDriver initEdgeDriver(String appURL) {
         System.out.println("Launching Edge browser...");
         WebDriverManager.edgedriver().setup();
@@ -54,6 +57,7 @@ public class BaseSetup {
         return driver;
     }
 
+//    @Test
     private static WebDriver initFirefoxDriver(String appURL) {
         System.out.println("Launching Firefox browser...");
         WebDriverManager.firefoxdriver().setup();

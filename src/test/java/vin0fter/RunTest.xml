@@ -1,9 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Page Object test">
-    <parameter name="browserType" value="chrome" />
+    <parameter name="browserType"
+               value="chrome" />
     <parameter name="appURL"
                value="http://congnongdan.vn" />
-    <test name="sample test">
+    <test name="sample test" >
         <classes>
             <class name="vin0fter.testcase.SearchTest">
                 <methods>

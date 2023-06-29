@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Object Parallel test" parallel="tests">
+    <parameter name="appURL"
+               value="http://congnongdan.vn" />
+
+    <test name="Chrome Test">
+        <parameter name="browserType" value="chrome" />
+        <classes>
+            <class name="vin0fter.testcase.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Firefox Test">
+        <parameter name="browserType" value="firefox" />
+        <classes>
+            <class name="vin0fter.testcase.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Edge Test">
+        <parameter name="browserType" value="edge" />
+        <classes>
+            <class name="vin0fter.testcase.SearchTest"/>
+        </classes>
+    </test>
+</suite>
