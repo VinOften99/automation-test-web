@@ -17,11 +17,10 @@ Bạn có thể truy cập Maven repository tại đây: https://mvnrepository.c
 - Java sdk 17
 
 ### Hướng dẫn cài đặt:
-1. Sau khi git clone, mở IntelliJ IDEA lên và chọn File->Open dẫn đến thư mục mà mình đã git clone về.
-2. Trong IntelliJ mở file pom.xml lên.
+1. Sau khi git clone, mở IntelliJ IDEA lên và chọn File->Open dẫn đến thư mục mà mình đã git clone về, sau đó chọn file pom.xml.
 ![image](https://i.imgur.com/L8bocAc.png)
-3. Tại giao diện code chuột phải và chọn như trong hình.
+2. Tại giao diện code chuột phải và chọn như trong hình.
 ![image](https://i.imgur.com/AEFv1ty.png)
-4. Sử dụng các file xml như trong ảnh để chạy.
+4. Sau khi reload, Sử dụng các file xml như trong ảnh để chạy.
 ![image](https://i.imgur.com/XUpkayf.png)
 
