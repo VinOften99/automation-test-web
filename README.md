@@ -19,11 +19,13 @@ Bạn có thể truy cập Maven repository tại đây: https://mvnrepository.c
 ### Hướng dẫn cài đặt:
 1. Sau khi git clone, mở IntelliJ IDEA lên và chọn File->Open dẫn đến thư mục mà mình đã git clone về, sau đó chọn file pom.xml.
 
-![image](https://i.imgur.com/L8bocAc.png)
+![image](https://i.imgur.com/UvK0xHt.png)
+
 2. Tại giao diện code chuột phải và chọn như trong hình.
-![image](https://i.imgur.com/AEFv1ty.png)
 
-4. Sau khi reload, Sử dụng các file xml như trong ảnh để chạy.
+![image](https://i.imgur.com/ZkUBofs.png)
 
-![image](https://i.imgur.com/XUpkayf.png)
+3. Sau khi reload, Sử dụng các file xml như trong ảnh để chạy.
+
+![image](https://i.imgur.com/3KfRXGl.png)
 
